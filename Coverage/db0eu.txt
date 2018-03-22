@@ -1,0 +1,16 @@
+171117_17:44
+51.5568
+49.758
+4.97518
+7.81251
+
+North:50.6575
+East:6.3941
+Sendeleistung: 41.7609
+Antenenengewinn: 0
+Antennenhöhe: 10
+Empfängerhöhe: 3
+Empfangsgewinn: 30
+Frequenz: 440
+Winkel: 0 ° Azimuth und 0 ° Höhenwinkel
+Antennentyp: Diamond-X50NA-UHF
