@@ -1,0 +1,16 @@
+180318_20:32
+49.8974
+48.0986
+7.01305
+9.75468
+
+North:48.9981
+East:8.38412
+Sendeleistung: 40
+Antenenengewinn: 3.3
+Antennenhöhe: 35
+Empfängerhöhe: 3
+Empfangsgewinn: 30
+Frequenz: 440
+Winkel: 0 ° Azimuth und 0 ° Höhenwinkel
+Antennentyp: Diamond-X50NA-UHF
