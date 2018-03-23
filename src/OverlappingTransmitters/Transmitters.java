@@ -3,6 +3,11 @@ package OverlappingTransmitters;
 import javafx.util.Pair;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 
 /**
@@ -59,7 +64,7 @@ public class Transmitters {
             Transmitter T1 = PairT.getKey();
             Transmitter T2 = PairT.getValue();
 
-            System.out.println("Checking " + T1.getName() + " against " + T2.getName() + "...");
+//            System.out.println("Checking " + T1.getName() + " against " + T2.getName() + "...");
             if (T1.isOverlapping(T2)) {
                 this.OverlappingTransmitters.put(new Pair<Transmitter,Transmitter>(T1,T2), true);
             }
@@ -82,6 +87,21 @@ public class Transmitters {
         System.out.println("Number of overlapping Transmitters: " + this.OverlappingTransmitters.size());
     }
 
+    public void saveOverlappingTransmitters (String OuputFile) {
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+        FileWriter fileWriter = null;
+        try {
+            fileWriter = new FileWriter(OuputFile);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+            printWriter.println(timeStamp);
+            for (Pair<Transmitter,Transmitter> PairT : this.OverlappingTransmitters.keySet()) {
+                printWriter.printf("%s,%s\r\n", PairT.getKey().getName(), PairT.getValue().getName());
+            }
+            printWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     private boolean intIsBetween (int lower, int higher, int value) {
         return (value >= lower && value <= higher);
