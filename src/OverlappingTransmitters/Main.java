@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
     Transmitters Ts = new Transmitters();
-    Ts.readAllTransmittersMetaData("Coverage");
+    Ts.readAllTransmittersMetaData("Coverage_all");
     Ts.findPotentialOverlappingTransmitters();
     Ts.printPotentialOverlappingTransmitters();
     Ts.verifyOverlapping();
